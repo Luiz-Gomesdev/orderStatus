@@ -1,0 +1,32 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.enums.OrderStatus;
+import intities.Client;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		Client c = new Client();
+		OrderStatus o = new OrderStatus();
+		
+		System.out.println("Enter number N");
+		int n = sc.nextInt();
+		
+		System.out.println("Enter cliente data:");
+		for (int i=1; i<n; i++) {
+			System.out.print("Name: " + c.getName());
+			System.out.print("Email: " + c.getEmail());
+			System.out.print("Bith date (DD/MM/YYYY): " + c.getBirthDate());
+		}
+		
+
+	}
+
+}
